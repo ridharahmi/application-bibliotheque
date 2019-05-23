@@ -35,19 +35,10 @@
             <input class="c-search__input u-input" placeholder="Search..." type="text"/>
         </div>
         <div class="header-icons-group">
-
-
-            <ul class="c-header-icon">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">{{ Auth::user()->name }}</a></li>
-
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">{{ Auth::user()->name }}</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="c-header-icon" style="width: 230px;">
+                <i class="fa fa-user fa-fw"></i>
+                {{ Auth::user()->name }}
+            </div>
             <div class="c-header-icon logout">
                 <a class="dropdown-item" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
@@ -71,34 +62,18 @@
         <nav class="c-menu js-menu">
             <ul class="u-list">
                 <li class="c-menu__item is-active" data-toggle="tooltip" title="Flights">
-                    <div class="c-menu__item__inner"><i class="fa fa-plane"></i>
-                        <div class="c-menu-item__title"><span>Flights</span></div>
+                    <div class="c-menu__item__inner"><i class="fa fa-cog"></i>
+                        <div class="c-menu-item__title"><span>Profile</span></div>
                     </div>
-                </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Modules">
-                    <div class="c-menu__item__inner"><i class="fa fa-puzzle-piece"></i>
-                        <div class="c-menu-item__title"><span>Modules</span></div>
-                        <div class="c-menu-item__expand js-expand-submenu"><i class="fa fa-angle-down"></i></div>
-                    </div>
-                    <ul class="c-menu__submenu u-list">
-                        <li>Payments</li>
-                        <li>Maps</li>
-                        <li>Notifications</li>
-                    </ul>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
                     <div class="c-menu__item__inner"><i class="fa fa-bar-chart"></i>
-                        <div class="c-menu-item__title"><span>Statistics</span></div>
-                    </div>
-                </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Gifts">
-                    <div class="c-menu__item__inner"><i class="fa fa-gift"></i>
-                        <div class="c-menu-item__title"><span>Gifts</span></div>
+                        <div class="c-menu-item__title"><span>Categories</span></div>
                     </div>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                    <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
-                        <div class="c-menu-item__title"><span>Settings</span></div>
+                    <div class="c-menu__item__inner"><i class="fa fa-book"></i>
+                        <div class="c-menu-item__title"><span>Livres</span></div>
                     </div>
                 </li>
             </ul>

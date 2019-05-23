@@ -497,3 +497,6 @@ main.l-main .page-title {
 .sidebar-is-expanded main.l-main {
     padding-left: 220px;
 }
+.settings_profil .input-group{
+ display: grid;
+}

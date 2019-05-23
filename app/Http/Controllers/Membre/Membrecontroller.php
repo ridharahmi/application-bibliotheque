@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Membre;
 
-use Auth;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Auth;
 
-class HomeController extends Controller
+class Membrecontroller extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,12 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //return view('home');
         $role = Auth::user()->role;
-        if ($role == 1) {
-            return redirect('admin');
-        } elseif ($role == 2) {
-            return redirect('membre');
+        if ($role == 2) {
+            return view('membre');
+        } else {
+            return redirect('home');
         }
+
     }
+
 }
