@@ -21,6 +21,7 @@ class CreateFichiersTable extends Migration
             $table->string('user_id');
             $table->text('file');
             $table->text('image');
+            $table->text('status');
             $table->timestamps();
         });
     }

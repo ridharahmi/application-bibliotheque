@@ -380,7 +380,7 @@ h3 {
     border-left-color: #f5642d;
 }
 
-.c-menu > ul .c-menu__item i {
+.c-menu > ul .c-menu__item a {
     flex: 0 0 70px;
     font-size: 18px;
     font-weight: normal;
@@ -390,6 +390,7 @@ h3 {
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    color:#fff;
 }
 
 .c-menu > ul .c-menu__item .c-menu-item__expand {
@@ -469,6 +470,7 @@ main.l-main {
     -ms-transition: padding 0.5s ease-in-out;
     -o-transition: padding 0.5s ease-in-out;
     transition: padding 0.5s ease-in-out;
+    overflow: scroll;
 }
 
 main.l-main .content-wrapper {
@@ -499,4 +501,28 @@ main.l-main .page-title {
 }
 .settings_profil .input-group{
  display: grid;
+}
+/*****/
+.filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
 }

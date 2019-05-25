@@ -19,5 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('admin', 'Admin\AdminController@index');
-Route::get('membre', 'Membre\MembreController@index');
+
+/***** Admin *****/
+Route::resource('GestionLivres', 'Admin\LivresController');
+route::match(['get', 'post'],'admin', 'Admin\AdminController@index');
+Route::resource('GestionMembre', 'Admin\MembresController');
+
+
+/***** Membre *****/
+route::match(['get', 'post'],'membre', 'Membre\MembreController@index');

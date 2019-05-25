@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin</title>
+    <title>Membre</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -61,19 +61,19 @@
     <div class="l-sidebar__content">
         <nav class="c-menu js-menu">
             <ul class="u-list">
-                <li class="c-menu__item" data-toggle="tooltip" title="Flights">
-                    <div class="c-menu__item__inner"><a href="{{ url('admin') }}"><i class="fa fa-cog"></i></a>
-                        <div class="c-menu-item__title"><a href="{{ url('admin') }}"><span>Profile</span></a></div>
+                <li class="c-menu__item is-active" data-toggle="tooltip" title="Flights">
+                    <div class="c-menu__item__inner"><i class="fa fa-cog"></i>
+                        <div class="c-menu-item__title"><span>Profile</span></div>
                     </div>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
-                    <div class="c-menu__item__inner"><a><i class="fa fa-users"></i></a>
-                        <div class="c-menu-item__title"><a href="{{ url('GestionMembre') }}"><span>Membres</span></a></div>
+                    <div class="c-menu__item__inner"><i class="fa fa-bar-chart"></i>
+                        <div class="c-menu-item__title"><span>Categories</span></div>
                     </div>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                    <div class="c-menu__item__inner"><a href="{{ url('GestionLivres') }}"><i class="fa fa-book"></i></a>
-                        <div class="c-menu-item__title"><a href="{{ url('GestionLivres') }}"><span>Livres</span></a></div>
+                    <div class="c-menu__item__inner"><i class="fa fa-book"></i>
+                        <div class="c-menu-item__title"><span>Livres</span></div>
                     </div>
                 </li>
             </ul>
