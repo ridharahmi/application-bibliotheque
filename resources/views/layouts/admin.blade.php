@@ -24,8 +24,8 @@
             <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span
                         class="bar-bot"></span></div>
         </div>
-        <div class="c-header-icon has-dropdown"><span class="c-badge c-badge--header-icon animated shake">87</span><i
-                    class="fa fa-bell"></i>
+        <div class="c-header-icon has-dropdown">
+            <i class="fa fa-bell"></i>
             <div class="c-dropdown c-dropdown--notifications">
                 <div class="c-dropdown__header"></div>
                 <div class="c-dropdown__content"></div>
@@ -42,10 +42,9 @@
             <div class="c-header-icon logout">
                 <a class="dropdown-item" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                      document.getElementById('logout-form').submit();">
                     <i class="fa fa-power-off"></i>
                 </a>
-
                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                       style="display: none;">
                     @csrf

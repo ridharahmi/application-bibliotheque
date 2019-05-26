@@ -24,8 +24,7 @@
             <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span
                         class="bar-bot"></span></div>
         </div>
-        <div class="c-header-icon has-dropdown"><span class="c-badge c-badge--header-icon animated shake">87</span><i
-                    class="fa fa-bell"></i>
+        <div class="c-header-icon has-dropdown"><i class="fa fa-bell"></i>
             <div class="c-dropdown c-dropdown--notifications">
                 <div class="c-dropdown__header"></div>
                 <div class="c-dropdown__content"></div>
@@ -61,19 +60,24 @@
     <div class="l-sidebar__content">
         <nav class="c-menu js-menu">
             <ul class="u-list">
-                <li class="c-menu__item is-active" data-toggle="tooltip" title="Flights">
-                    <div class="c-menu__item__inner"><i class="fa fa-cog"></i>
-                        <div class="c-menu-item__title"><span>Profile</span></div>
+                <li class="c-menu__item" data-toggle="tooltip" title="Flights">
+                    <div class="c-menu__item__inner"><a href="{{ url('membre') }}"><i class="fa fa-file"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('membre') }}"><span> Livres</span></a></div>
                     </div>
                 </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
-                    <div class="c-menu__item__inner"><i class="fa fa-bar-chart"></i>
-                        <div class="c-menu-item__title"><span>Categories</span></div>
+                <li class="c-menu__item" data-toggle="tooltip" title="Flights">
+                    <div class="c-menu__item__inner"><a href="{{ url('settings') }}"><i class="fa fa-cog"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('settings') }}"><span>Profile</span></a></div>
                     </div>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                    <div class="c-menu__item__inner"><i class="fa fa-book"></i>
-                        <div class="c-menu-item__title"><span>Livres</span></div>
+                    <div class="c-menu__item__inner"><a href="{{ url('Gestioncat') }}"><i class="fa fa-book"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('Gestioncat') }}"><span>Categories</span></a></div>
+                    </div>
+                </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
+                    <div class="c-menu__item__inner"><a href="{{ url('Gestionbook') }}"><i class="fa fa-book"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('Gestionbook') }}"><span>Mes Livres</span></a></div>
                     </div>
                 </li>
             </ul>

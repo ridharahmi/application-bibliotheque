@@ -82,6 +82,7 @@ class MembresController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+        return redirect()->back()->with('warning', 'User deleted successfully!');
     }
 }

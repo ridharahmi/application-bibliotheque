@@ -1,35 +1,77 @@
 @extends('layouts.membre')
 
 @section('content')
-    @include('message.flash-message')
-    {!! Form::open(array('class'=>'settings_profil','url'=>'membre','files'=>true)) !!}
-    <div class="input-group form-group">
-        <div class="input-group-prepend">
-            <label>Name</label>
+    <div class="container text-center">
+        <div class="row" id="ads">
+            <!-- Category Card -->
+            <div class="col-md-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">Low KMS</span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid"
+                             src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+                             alt="Alternate Text"/>
+                    </div>
+                    <div class="card-image-overlay m-auto">
+                        <span class="card-detail-badge">Used</span>
+                        <span class="card-detail-badge">$28,000.00</span>
+                        <span class="card-detail-badge">13000 Kms</span>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="ad-title m-auto">
+                            <h5>Honda Accord LX</h5>
+                        </div>
+                        <a class="ad-btn" href="#">View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">Fully-Loaded</span>
+                        <span class="card-notify-year">2017</span>
+                        <img class="img-fluid"
+                             src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262"
+                             alt="Alternate Text"/>
+                    </div>
+                    <div class="card-image-overlay m-auto">
+                        <span class="card-detail-badge">Used</span>
+                        <span class="card-detail-badge">$28,000.00</span>
+                        <span class="card-detail-badge">13000 Kms</span>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="ad-title m-auto">
+                            <h5>Honda CIVIC HATCHBACK LS</h5>
+                        </div>
+                        <a class="ad-btn" href="#">View</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card rounded">
+                    <div class="card-image">
+                        <span class="card-notify-badge">Price Reduced</span>
+                        <span class="card-notify-year">2018</span>
+                        <img class="img-fluid"
+                             src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+                             alt="Alternate Text"/>
+                    </div>
+                    <div class="card-image-overlay m-auto">
+                        <span class="card-detail-badge">Used</span>
+                        <span class="card-detail-badge">$22,000.00</span>
+                        <span class="card-detail-badge">8000 Kms</span>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="ad-title m-auto">
+                            <h5>Honda Accord Hybrid LT</h5>
+                        </div>
+                        <a class="ad-btn" href="#">View</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}">
     </div>
-    <div class="input-group form-group">
-        <div class="input-group-prepend">
-            <label>Email</label>
-        </div>
-        <input type="text" class="form-control" name="email_1" value="{{ Auth::user()->email }}" disabled>
-        <input type="hidden" class="form-control" name="email" value="{{ Auth::user()->email }}">
-    </div>
-    <div class="input-group form-group">
-        <div class="input-group-prepend">
-            <label>Password</label>
-        </div>
-        <input type="password" class="form-control " name="password">
-    </div>
-    <div class="input-group form-group">
-        <div class="input-group-prepend">
-            <label>Password Confirmation</label>
-        </div>
-        <input type="password" class="form-control" name="password_confirmation">
-    </div>
-    <div class="form-group">
-        <input type="submit" value="edit" class="btn btn-success">
-    </div>
-    {!! Form::close() !!}
 @endsection

@@ -27,4 +27,5 @@ Route::resource('GestionMembre', 'Admin\MembresController');
 
 
 /***** Membre *****/
+route::match(['get', 'post'],'settings', 'Membre\MembreController@settings');
 route::match(['get', 'post'],'membre', 'Membre\MembreController@index');
