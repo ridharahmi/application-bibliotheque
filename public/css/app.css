@@ -2,13 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html, body {
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-image: url('../image/bibliotheque.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     font-family: 'Numans', sans-serif;
 }
 
+#app{
+    background: rgba(2,2,2,0.2);
+}
 .container {
     height: 100%;
     align-content: center;
@@ -20,6 +23,7 @@ html, body {
     margin-bottom: auto;
     background-color: rgba(0, 0, 0, 0.5) !important;
     padding: 15px 30px 30px;
+    border: 1px solid #ddd;
 }
 
 .social_icon span {
@@ -87,5 +91,5 @@ input:focus {
 }
 
 .section_login {
-    padding-top: 10%;
+    padding-top: 5%;
 }
