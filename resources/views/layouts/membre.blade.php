@@ -60,22 +60,37 @@
     <div class="l-sidebar__content">
         <nav class="c-menu js-menu">
             <ul class="u-list">
-                <li class="c-menu__item" data-toggle="tooltip" title="Flights">
+                <li class="c-menu__item" data-toggle="tooltip" title="Livres">
                     <div class="c-menu__item__inner"><a href="{{ url('membre') }}"><i class="fa fa-file"></i></a>
                         <div class="c-menu-item__title"><a href="{{ url('membre') }}"><span> Livres</span></a></div>
                     </div>
                 </li>
-                <li class="c-menu__item" data-toggle="tooltip" title="Flights">
+                <li class="c-menu__item" data-toggle="tooltip" title="Profile">
                     <div class="c-menu__item__inner"><a href="{{ url('settings') }}"><i class="fa fa-cog"></i></a>
                         <div class="c-menu-item__title"><a href="{{ url('settings') }}"><span>Profile</span></a></div>
                     </div>
                 </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-                    <div class="c-menu__item__inner"><a href="{{ url('Gestioncat') }}"><i class="fa fa-book"></i></a>
-                        <div class="c-menu-item__title"><a href="{{ url('Gestioncat') }}"><span>Categories</span></a></div>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Informatique">
+                    <div class="c-menu__item__inner"><a href="{{ url('Gestioncat/1') }}"><i class="fa fa-desktop"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('Gestioncat/1') }}"><span>Informatique</span></a></div>
                     </div>
                 </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Math">
+                    <div class="c-menu__item__inner"><a href="{{ url('Gestioncat/2') }}"><i class="fa fa-etsy"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('Gestioncat/2') }}"><span>Math</span></a></div>
+                    </div>
+                </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Physique">
+                    <div class="c-menu__item__inner"><a href="{{ url('Gestioncat/3') }}"><i class="fa fa-outdent"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('Gestioncat/3') }}"><span>Physique</span></a></div>
+                    </div>
+                </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Chimie">
+                    <div class="c-menu__item__inner"><a href="{{ url('Gestioncat/4') }}"><i class="fa fa-sort-numeric-desc"></i></a>
+                        <div class="c-menu-item__title"><a href="{{ url('Gestioncat/4') }}"><span>Chimie</span></a></div>
+                    </div>
+                </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Mes Livres">
                     <div class="c-menu__item__inner"><a href="{{ url('Gestionbook') }}"><i class="fa fa-book"></i></a>
                         <div class="c-menu-item__title"><a href="{{ url('Gestionbook') }}"><span>Mes Livres</span></a></div>
                     </div>

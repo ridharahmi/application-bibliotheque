@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.membre')
 
 @section('content')
-    {!! Form::open(array('class'=>'form-horizontal','route'=>'GestionLivres.store','files'=>true)) !!}
+    {!! Form::open(array('class'=>'form-horizontal','route'=>'Gestionbook.store','files'=>true)) !!}
     <div class="form-group">
         <label>Titre</label>
         <input type="text" name="title" class="form-control" required>

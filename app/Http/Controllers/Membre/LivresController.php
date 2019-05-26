@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Membre;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,8 +16,9 @@ class LivresController extends Controller
      */
     public function index()
     {
-        $fichier = Fichier::paginate(10);
-        return view('admin.livres.index', compact('fichier'));
+        $id = Auth::user()->id;
+        $fichier = Fichier::where('user_id', $id)->paginate(10);
+        return view('membre.livres.index', compact('fichier'));
     }
 
     /**
@@ -27,13 +28,13 @@ class LivresController extends Controller
      */
     public function create()
     {
-        return view('admin.livres.add');
+        return view('membre.livres.add');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -43,11 +44,11 @@ class LivresController extends Controller
             $input['image'] = $this->uploadImage($input['image']);
             $input['file'] = $this->uploadImage($input['file']);
             $input['user_id'] = Auth::user()->id;
-            $input['status'] = 1;
+            $input['status'] = 0;
             //dd($input);
             $fichier = Fichier::create($input);
             if ($fichier) {
-                return redirect('GestionLivres')->with('success', 'Book created Successfully!');;
+                return redirect('Gestionbook')->with('success', 'Book created Successfully!');;
             }
         }
     }
@@ -66,35 +67,31 @@ class LivresController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $input['status'] = 1;
-        $file = Fichier::findOrFail($id)->update($input);
-        if ($file) {
-            return redirect('GestionLivres')->with('info', 'Book Valide Successfully!');
-        }
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         $file= Fichier::findOrFail($id);
-        return view('admin.livres.edit' ,compact('file'));
+        return view('membre.livres.edit' ,compact('file'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -117,14 +114,14 @@ class LivresController extends Controller
         $f = Fichier::findOrFail($id)->update($input);
         if($f)
         {
-            return redirect('GestionLivres')->with('info','Book Updated successfully!');
+            return redirect('Gestionbook')->with('info','Book Updated successfully!');
         }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

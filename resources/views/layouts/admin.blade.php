@@ -60,17 +60,17 @@
     <div class="l-sidebar__content">
         <nav class="c-menu js-menu">
             <ul class="u-list">
-                <li class="c-menu__item" data-toggle="tooltip" title="Flights">
+                <li class="c-menu__item" data-toggle="tooltip" title="Profile">
                     <div class="c-menu__item__inner"><a href="{{ url('admin') }}"><i class="fa fa-cog"></i></a>
                         <div class="c-menu-item__title"><a href="{{ url('admin') }}"><span>Profile</span></a></div>
                     </div>
                 </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
-                    <div class="c-menu__item__inner"><a><i class="fa fa-users"></i></a>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Membres">
+                    <div class="c-menu__item__inner"><a href="{{ url('GestionMembre') }}"><i class="fa fa-users"></i></a>
                         <div class="c-menu-item__title"><a href="{{ url('GestionMembre') }}"><span>Membres</span></a></div>
                     </div>
                 </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Livres">
                     <div class="c-menu__item__inner"><a href="{{ url('GestionLivres') }}"><i class="fa fa-book"></i></a>
                         <div class="c-menu-item__title"><a href="{{ url('GestionLivres') }}"><span>Livres</span></a></div>
                     </div>

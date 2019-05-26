@@ -29,7 +29,7 @@ class Membrecontroller extends Controller
     {
         $role = Auth::user()->role;
         if ($role == 2) {
-            $fichier = Fichier::where('status', 0)->paginate(9);
+            $fichier = Fichier::where('status', 1)->paginate(9);
             return view('membre', compact('fichier'));
         } else {
             return redirect('home');
@@ -53,6 +53,17 @@ class Membrecontroller extends Controller
             }
         }
         return view('membre.settings');
+    }
+
+    public function showbook($id)
+    {
+        $book = Fichier::findOrFail($id);
+        return view('membre.book', compact('book'));
+    }
+
+    public function categorie($id){
+        $fichier = Fichier::where('cat', $id)->where('status', 1)->paginate(9);
+        return view('membre.categorie', compact('fichier'));
     }
 
 }
