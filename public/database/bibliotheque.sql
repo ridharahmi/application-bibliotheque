@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 26 mai 2019 à 19:53
+-- Généré le :  mar. 28 mai 2019 à 00:37
 -- Version du serveur :  10.1.35-MariaDB
 -- Version de PHP :  7.2.9
 
@@ -107,8 +107,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Ridha Rahmi', 'ridha.rahmi13@gmail.com', NULL, '$2y$10$Wr2e2RXG9zj1N/3GOxY2OOiCpsb9.ZM4KJ1OM.8kWGwoWLUPhjBpW', '1', NULL, '2019-05-25 21:56:03', '2019-05-25 21:56:28'),
-(2, 'Ridha Rahmi', 'ridha.rahmi@hotmail.com', NULL, '$2y$10$avEn/P9HEEpPwJVh4Wi9tOsSR1rB6d.kVlIC6BSMLOZJI.BB3zTk6', '2', NULL, '2019-05-25 22:34:22', '2019-05-25 23:07:46');
+(1, 'webmaster admin', 'admin@gmail.com', NULL, '$2y$10$43V4piP/T4TOFCS7.N6Hh.zg0scDuWF8Kmg5N902/M.yPX3.GJ6PO', '1', NULL, '2019-05-25 21:56:03', '2019-05-27 21:34:49'),
+(2, 'webmaster membre', 'membre@gmail.com', NULL, '$2y$10$mySoM1HHor69ocyQpl1vme0yDsg3JOcwEiT64nQ7/9sqXIM5xJ9my', '2', NULL, '2019-05-25 22:34:22', '2019-05-27 21:36:26');
 
 --
 -- Index pour les tables déchargées

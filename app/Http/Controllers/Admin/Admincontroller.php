@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\User;
 
@@ -35,6 +36,9 @@ class Admincontroller extends Controller
                 if($input['password'] == null ){
                     $input['password'] = Auth::user()->password;
                     $input['password_confirmation'] = Auth::user()->password;
+                }else{
+                    $input['password'] = Hash::make($input['password']);
+                    $input['password_confirmation'] = Hash::make($input['password']);
                 }
                 //dd($input);
                 $user = User::findOrFail($id)->update($input);
